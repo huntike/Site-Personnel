@@ -1,67 +1,77 @@
 import React , { useState } from 'react';
-import {Card,Button,Box, Grid,CardHeader,CardFooter,CardBody,Collapsible} from 'grommet';
+import {Card,Button,Box, Grid,CardHeader,CardFooter,CardBody,Collapsible,Tab,Tabs} from 'grommet';
+import './Projet.css';
 
 
 
 
 export const Projet= () => {
 
-    const [showProjet1, setShowProjet1] = useState(false);
-    const [showProjet2, setShowProjet2] = useState(false);
+  
 
     return(
         <Box>
             <h1>Projet</h1>
 
-            <Grid
-                rows={['small', 'medium']}
-                columns={['medium', 'xlarge']}
-                gap="small"
-                areas={[
-              { name: 'header', start: [0, 0], end: [1, 0] },
-              { name: 'nav', start: [0, 1], end: [0, 1] },
-               { name: 'main', start: [1, 1], end: [1, 1] },
-              ]}
-              >
-            <Box gridArea="header" background="brand">
-                <Button onClick={() => setShowProjet1(!showProjet1) & setShowProjet2(false)}>Projet 1</Button>
-                <Button onClick={() => setShowProjet2(!showProjet2) & setShowProjet1(false) }>Projet 2</Button>  
 
-            </Box> 
-            <Box gridArea="nav" background="light-5"></Box> 
-            <Box gridArea="main" background="light-2">
-            
-            <Collapsible direction="horizontal" open={showProjet1}>
-            <Card  height="small" width="small" background="light-1">
-                <CardHeader pad="medium">Header</CardHeader>
-                <CardBody pad="medium">P1</CardBody>
-                <CardFooter pad={{horizontal: "small"}} background="light-2">   
-                <Button>hello</Button>
-                
-                
-                
-                <Button></Button> 
-                </CardFooter>
-            </Card>
-            </Collapsible>
-            
-            <Collapsible direction="horizontal" open={showProjet2}>
-            <Card  height="small" width="small" background="light-1">
-                <CardHeader pad="medium">Header</CardHeader>
-                <CardBody pad="medium">P2</CardBody>
-                <CardFooter pad={{horizontal: "small"}} background="light-2">   
-                <Button>hello</Button>
-                
-                
-                
-                <Button></Button> 
-                </CardFooter>
-            </Card>
-            </Collapsible>
-            
-            
-            </Box>
-            </Grid>
+
+            <Tabs>
+                <Tab  title="Projet Unity">
+                    
+                    <Grid gap="medium" columns={{ count: 'fit', size: 'small' }}>
+                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">GreenPitch</CardHeader>
+                        <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
+                        <CardFooter pad={{horizontal: "medium"}} background="light-2">   
+                        
+                        </CardFooter>
+                    </Card>
+                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">Tower Of Farm</CardHeader>
+                        <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
+                        <CardFooter pad={{horizontal: "medium"}} background="light-2">   
+                        
+                        </CardFooter>
+                    </Card>
+                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">Escape</CardHeader>
+                        <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
+                        <CardFooter pad={{horizontal: "medium"}} background="light-2">   
+                        
+                        </CardFooter>
+                    </Card>
+
+
+                    </Grid>
+                    
+                </Tab>
+                <Tab title="Projet Web" align="center">
+                <Grid gap="medium" columns={{ count: 'fit', size: 'small' }}>
+                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">Header</CardHeader>
+                        <CardBody pad="medium">P2</CardBody>
+                        <CardFooter pad={{horizontal: "large"}} background="light-2">   
+                        
+                        </CardFooter>
+                    </Card>
+                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">Header</CardHeader>
+                        <CardBody pad="medium">P2</CardBody>
+                        <CardFooter pad={{horizontal: "large"}} background="light-2">   
+                        
+                        </CardFooter>
+                    </Card>
+                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">Header</CardHeader>
+                        <CardBody pad="medium">P2</CardBody>
+                        <CardFooter pad={{horizontal: "large"}} background="light-2">   
+                        
+                        </CardFooter>
+                    </Card>
+                </Grid>
+                </Tab>
+            </Tabs>           
+  
         </Box>
 
     );

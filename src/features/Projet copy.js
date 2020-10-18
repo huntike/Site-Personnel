@@ -1,49 +1,13 @@
 import React , { useState } from 'react';
-import {Card,Button,Box, Grid,CardHeader,CardFooter,CardBody} from 'grommet';
+import {Card,Button,Box, Grid,CardHeader,CardFooter,CardBody,Collapsible} from 'grommet';
 
 
 
 
 export const Projet= () => {
-    let activeTab = 0 ;
-    
-    function ChangeActiveTab(id){
-        
 
-        if (id===1){
-            activeTab = 1;
-
-        }else if (id===2){
-            activeTab = 2;
-
-        }
-    }
-
-    function ToggleCard() {
-        console.log("in toogleCard");
-        console.log(activeTab);
-
-    if(activeTab== 0 ){
-        return(
-            <Card  height="small" width="small" background="light-1">
-                <CardHeader pad="medium">Header</CardHeader>
-                <CardBody pad="medium">Body</CardBody>
-                <CardFooter pad={{horizontal: "small"}} background="light-2">   
-                <Button>hello</Button>
-                
-                
-                
-                <Button></Button> 
-                </CardFooter>
-            </Card>
-        );
-    
-    } else if(activeTab==1){
-        return(
-            <h1>projet 2</h1>
-        );
-    }
-    }
+    const [showProjet1, setShowProjet1] = useState(false);
+    const [showProjet2, setShowProjet2] = useState(false);
 
     return(
         <Box>
@@ -60,12 +24,43 @@ export const Projet= () => {
               ]}
               >
             <Box gridArea="header" background="brand">
-                <Button onClick={() => ChangeActiveTab(1)}>Projet 1</Button>
-                <Button onClick={() => ChangeActiveTab(2)}>Projet 2</Button>  
+                <Button onClick={() => setShowProjet1(!showProjet1) & setShowProjet2(false)}>Projet 1</Button>
+                <Button onClick={() => setShowProjet2(!showProjet2) & setShowProjet1(false) }>Projet 2</Button>  
 
             </Box> 
             <Box gridArea="nav" background="light-5"></Box> 
-            <Box gridArea="main" background="light-2">{ToggleCard()}</Box>
+            <Box gridArea="main" background="light-2">
+            
+            <Collapsible direction="horizontal" open={showProjet1}>
+            <Card  height="small" width="small" background="light-1">
+                <CardHeader pad="medium">Header</CardHeader>
+                <CardBody pad="medium">P1</CardBody>
+                <CardFooter pad={{horizontal: "small"}} background="light-2">   
+                <Button>hello</Button>
+                
+                
+                
+                <Button></Button> 
+                </CardFooter>
+            </Card>
+            </Collapsible>
+            
+            <Collapsible direction="horizontal" open={showProjet2}>
+            <Card  height="small" width="small" background="light-1">
+                <CardHeader pad="medium">Header</CardHeader>
+                <CardBody pad="medium">P2</CardBody>
+                <CardFooter pad={{horizontal: "small"}} background="light-2">   
+                <Button>hello</Button>
+                
+                
+                
+                <Button></Button> 
+                </CardFooter>
+            </Card>
+            </Collapsible>
+            
+            
+            </Box>
             </Grid>
         </Box>
 

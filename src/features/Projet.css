@@ -1,0 +1,12 @@
+.Card {
+     
+    margin:0 auto;
+    display : flex;
+    margin-top: 10%;
+    
+}
+
+.Tab{
+    font-size: 45px;
+    color: aqua;
+}
