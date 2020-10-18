@@ -6,6 +6,9 @@
   import {Main} from './features/Main';
 
   const theme = {
+    body: {
+      margin:'0px',
+    },
     global: {
       colors: {
         brand: '#228BE6',
@@ -26,9 +29,9 @@
 
     return (
       <Grommet theme={theme}>
-        
+        <AppBars ></AppBars>
           <Box fill>
-            <AppBars></AppBars>
+            
             <Main/>
 
           

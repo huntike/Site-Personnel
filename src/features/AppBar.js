@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, Header, Menu} from 'grommet'
 import {Link} from 'react-router-dom';
+import './AppBar.css';
 
 const AppBar = (props) => (
     <Box
@@ -23,10 +24,10 @@ export const AppBars = () => {
 
     return(
         <Box>
-            <AppBar>
+            <AppBar classname="header-color">
                 <Link to="/"><Button label="Home"/></Link>
                 Logan
-                <Header background="brand">
+                <Header classname="header-color" >
                     
                     <Link to="/Experience"><Button label="Experience"/></Link>
                     <Link to="/Projet"><Button label="Projet"/></Link>
