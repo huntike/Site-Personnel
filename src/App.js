@@ -3,7 +3,7 @@
   import { Notification } from 'grommet-icons';
   import {AppBars} from './features/AppBar';
 
-  import {Main} from './features/Main';
+  import {MainRoute} from './features/MainRoute';
 
   const theme = {
     body: {
@@ -32,7 +32,7 @@
         <AppBars ></AppBars>
           <Box fill>
             
-            <Main/>
+            <MainRoute/>
 
           
 

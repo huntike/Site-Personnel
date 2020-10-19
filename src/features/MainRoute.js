@@ -11,7 +11,7 @@ import { Switch, Route } from 'react-router-dom';
 
 
 
-export const Main= () => {
+export const MainRoute= () => {
     return(
       <Switch>
         <Route exact path="/" component={LandingPage}/>
@@ -24,4 +24,4 @@ export const Main= () => {
     )
 
 }
-export default Main;
+export default MainRoute;

@@ -19,21 +19,21 @@ export const Projet= () => {
                 <Tab  title="Projet Unity">
                     
                     <Grid gap="medium" columns={{ count: 'fit', size: 'small' }}>
-                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                    <Card className="Card" height="medium" width="large" background="light-1" >
                         <CardHeader pad="medium">GreenPitch</CardHeader>
                         <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
                         <CardFooter pad={{horizontal: "medium"}} background="light-2">   
                         
                         </CardFooter>
                     </Card>
-                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                    <Card className="Card" height="medium" width="large" background="light-3" >
                         <CardHeader pad="medium">Tower Of Farm</CardHeader>
                         <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
                         <CardFooter pad={{horizontal: "medium"}} background="light-2">   
                         
                         </CardFooter>
                     </Card>
-                    <Card className="Card" height="medium" width="medium" background="light-1" >
+                    <Card className="Card" height="medium" width="large" background="light-1" >
                         <CardHeader pad="medium">Escape</CardHeader>
                         <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
                         <CardFooter pad={{horizontal: "medium"}} background="light-2">   
