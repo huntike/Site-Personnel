@@ -1,7 +1,9 @@
   import React, { useState } from "react";
-  import { Box, Collapsible, Grommet,  } from 'grommet';
-  import { Notification } from 'grommet-icons';
+  import { Box, Grommet,  } from 'grommet';
+
   import {AppBars} from './features/AppBar';
+  import {Footers} from './features/Footers';
+
 
   import {MainRoute} from './features/MainRoute';
 
@@ -34,18 +36,14 @@
 
     return (
       <Grommet theme={theme}>
-        <AppBars ></AppBars>
+        <AppBars />
           <Box fill>
             
             <MainRoute/>
 
-          
-
-            < Collapsible direction="horizontal" >
-          
-            </Collapsible>
-        </Box>
         
+        </Box>
+        <Footers/>
         
       </Grommet>
     );
