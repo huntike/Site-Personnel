@@ -6,17 +6,22 @@
   import {MainRoute} from './features/MainRoute';
 
   const theme = {
-    body: {
-      margin:'0px',
-    },
+
     global: {
+      background:{
+
+      },
       colors: {
-        brand: '#228BE6',
+        
+
       },
       font: {
         family: 'Roboto',
         size: '18px',
         height: '20px',
+      },
+      body: {
+        margin:'0px',
       },
     },
   };

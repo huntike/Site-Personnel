@@ -1,11 +1,25 @@
 .main-img {
     border-radius: 50%;
-    width:35%;
-    margin-top:5%;
-    margin-left:5%; 
+    width:80%;
+    margin: auto;
+    margin-top: 10%;
 }
 .title{
     text-align: center;
     margin-top:5%;
     
+}
+
+
+.name {
+    font-size: 36px!important;
+    text-align: center;
+
+}
+.age{
+    font-size: 28px!important;
+    text-align: center;
+}
+.information{
+    margin-top: 15%;
 }
