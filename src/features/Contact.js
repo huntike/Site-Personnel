@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box,Form,FormField,Text,Button,TextArea,List,Grid} from 'grommet';
-import { Gremlin } from 'grommet-icons';
+
 
 const FormFieldLabel = props => {
     const { required, label, ...rest } = props;
@@ -30,13 +30,7 @@ const FormFieldLabel = props => {
     'San Francisco',
   ];
   
-  const data = [];
-  for (let i = 0; i < 5; i += 1) {
-    data.push({
-      entry: `entry-${i + 1}`,
-      location: locations[i % locations.length],
-    });
-  }
+
   
 
 export const Contact= () => {
@@ -74,19 +68,7 @@ export const Contact= () => {
             </Form>
           </Box>
           <Box  gridArea="info" pad="large" background="light-1" >
-            <List
-              data={data.slice(0, 10)}
-              primaryKey={item => (
-                <Text size="large" weight="bold">
-                  {item.entry}
-                </Text>
-              )}
-              secondaryKey={item => (
-                <Text size="small" color="dark-4">
-                  {item.location}
-                </Text>
-              )}
-            />
+          <List data={locations} />
         </Box>
       </Grid>
     </Box>

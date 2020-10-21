@@ -10,6 +10,8 @@ export const Hobbies= () => {
   const [activeBogota, setActiveBogota] = React.useState();
   const [activeCartagena, setActiveCartagena] = React.useState();
   const [activeTunis, setActiveTunis] = React.useState();
+  const [activeMontreal, setActiveMontreal] = React.useState();
+
 
 
     return(
@@ -48,7 +50,7 @@ export const Hobbies= () => {
                     {
                       name: 'Tokyo',
                       location: [35.652832, 139.839478],
-                      color: 'graph-1',
+                      color: 'graph-4',
                       onClick: () => setActiveTokyo(!activeTokyo) 
                                   & setActiveMiami(false)
                                   & setActiveToulouse(false)
@@ -60,57 +62,75 @@ export const Hobbies= () => {
                     {
                       name: 'Toulouse',
                       location: [37.8534, 2.3488],
-                      color: 'graph-1',
+                      color: 'graph-4',
                       onClick: () => setActiveToulouse(!activeToulouse)
                                   & setActiveTokyo(false)
                                   & setActiveMiami(false)
                                   & setActiveBogota(false)
+                                  & setActiveMontreal(false)
                                   & setActiveCartagena(false)
                                   & setActiveTunis(false),
                     },
                     {
                       name: 'Miami',
                       location: [25.76167984, 	-80.1917902],
-                      color: 'graph-1',
+                      color: 'graph-4',
                       onClick: () => setActiveMiami(!activeMiami)
                       & setActiveTokyo(false)
                       & setActiveToulouse(false)
                       & setActiveBogota(false)
+                      & setActiveMontreal(false)
                       & setActiveCartagena(false)
                       & setActiveTunis(false),
                     },
                     {
                       name: 'Bogota',
                       location: [4.598056, 	-74.075833],
-                      color: 'graph-1',
+                      color: 'graph-4',
                       onClick: () => setActiveBogota(!activeBogota)
                       & setActiveTokyo(false)
                       & setActiveMiami(false)
                       & setActiveToulouse(false)
+                      & setActiveMontreal(false)
                       & setActiveCartagena(false)
                       & setActiveTunis(false),
                     },
                     {
                       name: 'Cartagena',
                       location: [10.4, 	-75.5 ],
-                      color: 'graph-1',
+                      color: 'graph-4',
                       onClick: () => setActiveCartagena(!activeCartagena)
                       & setActiveTokyo(false)
                       & setActiveMiami(false)
                       & setActiveBogota(false)
                       & setActiveToulouse(false)
+                      & setActiveMontreal(false)
                       & setActiveTunis(false),
                     },
                     {
                       name: 'Tunis',
                       location: [33.886917, 	9.537499],
-                      color: 'graph-1',
+                      color: 'graph-4',
                       onClick: () => setActiveTunis(!activeTunis)
                       & setActiveTokyo(false)
                       & setActiveMiami(false)
                       & setActiveBogota(false)
+                      & setActiveMontreal(false)
                       & setActiveCartagena(false)
                       & setActiveToulouse(false),
+                    },
+                    {
+                      name: 'Montreal',
+                      location: [45.5088400, 	-73.5878100],
+                      color: 'graph-4',
+                      onClick: () => setActiveMontreal(!activeMontreal)
+                      & setActiveTokyo(false)
+                      & setActiveMiami(false)
+                      & setActiveBogota(false)
+                      & setActiveCartagena(false)
+                      & setActiveToulouse(false)
+                      & setActiveTunis(false),
+
                     },
                     
                 ]}
@@ -144,6 +164,11 @@ export const Hobbies= () => {
               {activeTunis && 
               <Box margin="large">
                 <Heading>Tunis</Heading>
+              </Box>}
+              
+              {activeMontreal && 
+              <Box margin="large">
+                <Heading>Montreal</Heading>
               </Box>}
             </Box>
           </Box>

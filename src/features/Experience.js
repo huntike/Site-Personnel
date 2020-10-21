@@ -1,5 +1,5 @@
         import React, { useState } from "react";
-        import { Box, Grid, Header, Menu} from 'grommet'
+        import { Box, Diagram, Stack, Menu} from 'grommet'
 
         export const Experience = () => {
 
@@ -7,20 +7,42 @@
 
             return(
                 <Box>
-                    <Grid 
-                    rows={['small', 'medium']}
-                    columns={['medium', 'xlarge']}
-                    gap="medium"
-                    areas={[
-                        { name: 'header', start: [0, 0], end: [1, 0] },
-                        { name: 'nav', start: [0, 1], end: [0, 1] },
-                        { name: 'main', start: [1, 1], end: [1, 1] },
-                    ]}
-                    >
-                    <Box gridArea="header" background="brand" />
-                    <Box gridArea="nav" background="light-5" />
-                    <Box gridArea="main" background="light-2" />
-                    </Grid>
+                    <Stack guidingChild={1}>
+                    <Diagram
+                        connections={[
+                        {
+                            fromTarget: '1',
+                            toTarget: '2',
+                            thickness: 'medium',
+                            color: 'neutral-3',
+                        },
+                        {
+                            fromTarget: '1',
+                            toTarget: '4',
+                            thickness: 'medium',
+                            color: 'neutral-3',
+                            type: 'rectilinear',
+                        },
+                        ]}
+                    />
+                    <Box align="center">
+                        <Box  direction="row">
+                            <Box id="1" margin="xlarge" pad="xlarge" background="light-4" />
+                        </Box>
+                        <Box direction="row">
+                        <Box id="2" margin="xlarge" pad="xlarge" background="light-4" />
+
+                        </Box>
+                        <Box direction="row">
+                        <Box id="3" margin="xlarge" pad="xlarge" background="light-4" />
+
+                        </Box>
+                        <Box direction="row">
+                        <Box id="4" margin="xlarge" pad="xlarge" background="light-4" />
+
+                        </Box>
+                    </Box>
+                    </Stack>
                     
                 </Box>
             );
