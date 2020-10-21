@@ -23,18 +23,23 @@ export const LandingPage= () => {
                 <Box gridArea="nav" background="light-1"  >
                 <Grid gap="xsmall" columns={{ count: 2, size: 'medium' }}>
                     <img src={process.env.PUBLIC_URL + '/img//IMG_2694.jpg'} className="main-img"/>
-                    <Box className="information">
+                    <Box  className="information">
                         <Paragraph className="name">Logan Le Lay</Paragraph>
                         <Paragraph className="age">23 ans</Paragraph>
                     </Box>
                 </Grid>
 
                 </Box>
-                <Box gridArea="main" background="light-5"  >
+                <Box gridArea="main" background="light-5" align="center"  >
                     <Heading className="title">Etudiant a Ynov</Heading>
-                    <Paragraph></Paragraph>
+                    <Paragraph >
+                        Etudiant à YNOV TOULOUSE Ecole Supérieur en
+                        Informatique, actuellement en Ingésup 5
+                        eme année
+                        en Master Développement Web.
+                    </Paragraph>
                 </Box>
-                <Box gridArea="stat" align="center" pad="large" background="light-3">
+                <Box gridArea="stat" align="center" pad="large" >
                     <Heading>Compétences</Heading>
                     
                     <Skills/>

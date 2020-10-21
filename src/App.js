@@ -31,10 +31,7 @@
 
   function App() {
     
-    const [showExperience, setExperience] = useState(false);
-
-
-    return (
+      return (
       <Grommet theme={theme}>
         <AppBars />
           <Box fill>
