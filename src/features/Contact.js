@@ -23,11 +23,13 @@ const FormFieldLabel = props => {
     );
   };
   const locations = [
+
     'Boise',
     'Fort Collins',
     'Los Gatos',
     'Palo Alto',
     'San Francisco',
+
   ];
   
 
@@ -68,7 +70,10 @@ export const Contact= () => {
             </Form>
           </Box>
           <Box  gridArea="info" pad="large" background="light-1" >
-          <List data={locations} />
+
+          <List data={locations}>
+
+          </List>
         </Box>
       </Grid>
     </Box>

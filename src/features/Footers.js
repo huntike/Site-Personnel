@@ -1,14 +1,14 @@
 import React from 'react';
-import {Footer,Text,Anchor} from 'grommet';
+import {Footer,Text} from 'grommet';
 import './Footers.css';
 
 
 export const Footers= () => {
 
     return(
-        <Footer justify="center" pad="medium">
+        <Footer justify="center" pad="medium"  background= "linear-gradient(to right, #F27121, #E94057, #8A2387);  ">
             <Text textAlign="center" size="medium">
-                © 2019 Copyright Grommet
+                © 2019 Copyright Logan
             </Text>
         </Footer>
     );

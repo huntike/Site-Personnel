@@ -2,6 +2,8 @@ import React from 'react';
 import {Text, WorldMap , Box, Heading,Grid} from 'grommet';
 import './Hobbies.css';
 
+
+
 export const Hobbies= () => {
   const [activeTokyo, setActiveTokyo] = React.useState();
 
@@ -18,20 +20,20 @@ export const Hobbies= () => {
       
  
       
-          <Box  align="center" pad="large" >
-                    <Grid 
-        rows={['xsmall','large']}
-        columns={['xsmall','large', 'large']}
-        gap="large"
-        areas={[
-            
-            { name: 'info', start: [1, 1], end: [1, 1] },
-            { name: 'image', start: [2, 1], end: [2, 1] },
-            
+          <Box  align="center" pad="none"  gap="none">
+              <Grid 
+                  rows={['xxsmall','large']}
+                  columns={['xxsmall','Large', 'Large']}
+                  gap="large"
+                  areas={[
+                      
+                      { name: 'info', start: [1, 1], end: [1, 1] },
+                      { name: 'image', start: [2, 1], end: [2, 1] },
+                      
 
-        ]}
-        >
-                    <Box gridArea="info" align="center" pad="large" background="light-1">
+                  ]}
+                  >
+                    <Box gridArea="info"  align="center" pad="large" background="light-1">
                           <Heading>Le Sport</Heading>
                           <Text></Text>
                           <Text></Text>
@@ -41,7 +43,7 @@ export const Hobbies= () => {
 
                     </Box>        
             </Grid>
-            <Box className="box-map" align="center" background="dark-2">
+            <Box className="box-map" align="center" width="large" background="dark-2">
               <Heading>Mes voyages</Heading>
               <WorldMap className="worl-map"
 

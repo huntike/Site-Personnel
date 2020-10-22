@@ -8,14 +8,14 @@
   import {MainRoute} from './features/MainRoute';
 
   const theme = {
+    breakpoints: {},
 
     global: {
       background:{
 
       },
-      colors: {
-        
-
+      size: {
+        xmedium:'500px'
       },
       font: {
         family: 'Roboto',
@@ -34,7 +34,7 @@
       return (
       <Grommet theme={theme}>
         <AppBars />
-          <Box fill>
+          <Box>
             
             <MainRoute/>
 

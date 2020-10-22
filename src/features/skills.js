@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box,Text,Stack,Meter,Grid} from 'grommet';
+import {Box,Text,Stack,Meter,Heading} from 'grommet';
 import './Skills.css'
 
 
@@ -25,7 +25,7 @@ export const Skills= () => {
                                 
                             />
                                 <Box direction="row" align="center" pad={{ bottom: 'xsmall' }}>
-                                    <Text size="xxlarge" weight="bold">
+                                    <Text size="xlarge" weight="bold">
                                     {itemValue}% 
                                     </Text>
                                     
@@ -37,10 +37,14 @@ export const Skills= () => {
                    meterValue.push(comp);
      }
     return(
-        <Box>
-            <Grid gap="small" columns={{ count: 4, size: 'medium' }}>
+        <Box justify="center" align="center" >
+        <Heading>Compétences</Heading>
+        <Box direction="row" height="large" wrap="true" justify="center" align="center" gap="large" >
+        
+            
                 {meterValue}
-            </Grid>
+            
+        </Box>
         </Box>
         );
     }

@@ -1,36 +1,36 @@
 import React from 'react';
-import {Grid, Box,Heading, Paragraph,Text,Stack,Meter} from 'grommet';
+import {Grid, Box,Heading, Paragraph,ResponsiveContext ,Image,Meter} from 'grommet';
 import './LandingPage.css';
 import {Skills} from './skills';
 
+const ResponsiveGrid = ({ children, areas, ...props }) => {
+const size = React.useContext(ResponsiveContext);
+return (
+  <Grid areas={areas[size]} {...props}>
+    {children}
+  </Grid>
+);
+};
 export const LandingPage= () => {
+    
     
     return(
         <Box>
-            <Grid 
-            rows={['xsmall','medium', 'medium']}
-            columns={['xsmall','large', 'large']}
-            gap="large"
-            areas={[
-                
-                { name: 'nav', start: [1, 1], end: [1, 1] },
-                { name: 'main', start: [2, 1], end: [2, 1] },
-                { name: 'stat', start: [1, 2], end: [2, 2] },
-
-            ]}
-            >
  
-                <Box gridArea="nav" background="light-1"  >
-                <Grid gap="xsmall" columns={{ count: 2, size: 'medium' }}>
-                    <img src={process.env.PUBLIC_URL + '/img//IMG_2694.jpg'} className="main-img"/>
+            <Box direction="row" height="large" wrap="true" justify="center" align="center" >
+                <Box flex="grow"direction="row" width="xmedium" height="xmedium"justify="center" align="center" background="light-1"  >
+                    <Box width="small" height="small"  >
+                    <Image fit="cover" src={process.env.PUBLIC_URL + '/img//IMG_2694.jpg'} />
+
+                    </Box>
                     <Box  className="information">
                         <Paragraph className="name">Logan Le Lay</Paragraph>
                         <Paragraph className="age">23 ans</Paragraph>
                     </Box>
-                </Grid>
+               
 
                 </Box>
-                <Box gridArea="main" background="light-5" align="center"  >
+                <Box  flex="grow"width="xmedium" height="xmedium"background="light-5" align="center"  >
                     <Heading className="title">Etudiant a Ynov</Heading>
                     <Paragraph >
                         Etudiant à YNOV TOULOUSE Ecole Supérieur en
@@ -39,12 +39,13 @@ export const LandingPage= () => {
                         en Master Développement Web.
                     </Paragraph>
                 </Box>
-                <Box gridArea="stat" align="center" pad="large" >
-                    <Heading>Compétences</Heading>
+            </Box>
+                <Box fill="vertical" flex="true" height="large" align="center"  >
+                    
                     
                     <Skills/>
                 </Box>
-            </Grid>          
+                      
         </Box>        
     )
 

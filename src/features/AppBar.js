@@ -19,12 +19,15 @@ const AppBar = (props) => (
   );
 
 export const AppBars = () => {
-    const [showSidebar, setShowSidebar] = useState(false);
+
     
 
     return(
         <Box>
-            <AppBar classname="header-color">
+            <AppBar  background= "linear-gradient(to right, #F27121, #E94057, #8A2387);  "
+            
+            
+            >
                 <Link to="/"><Button label="Home"/></Link>
                 Logan
                 <Header classname="header-color" >
