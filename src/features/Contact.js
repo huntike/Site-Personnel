@@ -38,20 +38,10 @@ const FormFieldLabel = props => {
 export const Contact= () => {
     const [comments, setComments] = React.useState('');
     return(
-      <Box>
-        <Grid 
-        rows={['xsmall','large']}
-        columns={['xsmall','large', 'large']}
-        gap="large"
-        areas={[
-            
-            { name: 'form', start: [1, 1], end: [1, 1] },
-            { name: 'info', start: [2, 1], end: [2, 1] },
-            
+      <Box height="xlarge">
 
-        ]}
-        >
-          <Box gridArea="form" align="center" pad="large" background="light-1">
+          <Box  direction="row" height="large" wrap="true" justify="center" align="center" pad="large" >
+          <Box flex="grow"direction="row" width="xmedium" height="xmedium"justify="center" align="center" background="light-1"  >
             <Form >
               <FormFieldLabel name="firstName" label="FirstName" required />
               <FormFieldLabel name="LastName" label="LastName" required />
@@ -68,14 +58,19 @@ export const Contact= () => {
                 * Required Field
               </Text>
             </Form>
-          </Box>
-          <Box  gridArea="info" pad="large" background="light-1" >
-
-          <List data={locations}>
+            </Box>
+            <Box flex="grow"direction="row" width="xmedium" height="xmedium"justify="center" align="center" background="light-1"  >
+            <List data={locations}>
 
           </List>
-        </Box>
-      </Grid>
+          </Box>
+
+          </Box>
+          
+
+          
+        
+
     </Box>
     )
 
