@@ -1,6 +1,5 @@
-import React , { useState } from 'react';
-import {Card,Box, Grid,CardHeader,CardFooter,CardBody,Collapsible,Tab,Tabs} from 'grommet';
-import './Projet.css';
+import React from 'react';
+import {Card,Box,CardHeader,CardFooter,CardBody,Tab,Tabs} from 'grommet';
 import styled from 'styled-components';
 
 
@@ -17,64 +16,64 @@ export const Projet= () => {
 
     return(
         <Box height="xlarge">
-            <h1>Projet</h1>
+         
 
 
 
-            <Tabs>
+            <Tabs  margin="large">
                 <Tab  title="Projet Unity">
                     
-                    <Grid gap="medium" columns={{ count: 'fit', size: 'small' }}>
-                    <CostumCard className="Card" height="medium" width="large" background="light-1" >
+                <Box direction="row" height="large" wrap="true" justify="center" align="center" >
+                    <CostumCard margin="auto"  height="medium" width="medium" background="light-1" >
                         <CardHeader pad="medium">GreenPitch</CardHeader>
                         <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
                         <CardFooter pad={{horizontal: "medium"}} background="light-2">   
                         
                         </CardFooter>
                     </CostumCard>
-                    <Card className="Card" height="medium" width="large" background="light-3" >
+                    <CostumCard margin="auto" height="medium" width="medium" background="light-3" >
                         <CardHeader pad="medium">Tower Of Farm</CardHeader>
                         <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
                         <CardFooter pad={{horizontal: "medium"}} background="light-2">   
                         
                         </CardFooter>
-                    </Card>
-                    <Card className="Card" height="medium" width="large" background="light-1" >
+                    </CostumCard>
+                    <CostumCard margin="auto" height="medium" width="medium" background="light-1" >
                         <CardHeader pad="medium">Escape</CardHeader>
                         <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</CardBody>
                         <CardFooter pad={{horizontal: "medium"}} background="light-2">   
                         
                         </CardFooter>
-                    </Card>
+                    </CostumCard>
 
 
-                    </Grid>
+                    </Box>
                     
                 </Tab>
                 <Tab title="Projet Web" align="center">
-                <Grid gap="medium" columns={{ count: 'fit', size: 'small' }}>
-                    <Card className="Card" height="medium" width="medium" background="light-1" >
-                        <CardHeader pad="medium">Header</CardHeader>
-                        <CardBody pad="medium">P2</CardBody>
+                <Box direction="row" height="large" wrap="true" justify="center" align="center" >                
+                    <CostumCard margin="auto" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">BeToMood</CardHeader>
+                        <CardBody pad="medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</CardBody>
                         <CardFooter pad={{horizontal: "large"}} background="light-2">   
                         
                         </CardFooter>
-                    </Card>
-                    <Card className="Card" height="medium" width="medium" background="light-1" >
-                        <CardHeader pad="medium">Header</CardHeader>
-                        <CardBody pad="medium">P2</CardBody>
+                    </CostumCard>
+                    <CostumCard margin="auto" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">Log 1</CardHeader>
+                        <CardBody pad="medium">site destiné au corps médical pour de la gestion de patient</CardBody>
                         <CardFooter pad={{horizontal: "large"}} background="light-2">   
                         
                         </CardFooter>
-                    </Card>
-                    <Card className="Card" height="medium" width="medium" background="light-1" >
-                        <CardHeader pad="medium">Header</CardHeader>
-                        <CardBody pad="medium">P2</CardBody>
+                    </CostumCard>
+                    <CostumCard margin="auto" height="medium" width="medium" background="light-1" >
+                        <CardHeader pad="medium">start and sport</CardHeader>
+                        <CardBody pad="medium">site web sur le sport et l'alimentation</CardBody>
                         <CardFooter pad={{horizontal: "large"}} background="light-2">   
                         
                         </CardFooter>
-                    </Card>
-                </Grid>
+                    </CostumCard>
+                </Box>
                 </Tab>
             </Tabs>           
   

@@ -7,6 +7,7 @@ import {Experience} from './Experience';
 
 
 
+
 import { Switch, Route } from 'react-router-dom';
 
 
@@ -19,6 +20,8 @@ export const MainRoute= () => {
         <Route exact path="/Loisir" component={Hobbies}/>
         <Route exact path="/Contact" component={Contact}/>
         <Route exact path="/Experience" component={Experience}/>
+     
+
 
       </Switch>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Footer,Text} from 'grommet';
-import './Footers.css';
+
 
 
 export const Footers= () => {

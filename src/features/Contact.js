@@ -24,11 +24,11 @@ const FormFieldLabel = props => {
   };
   const locations = [
 
-    'Boise',
-    'Fort Collins',
-    'Los Gatos',
-    'Palo Alto',
-    'San Francisco',
+    'mail : logan.lelay@orange.fr',
+    'téléphone : 06 76 05 57 07',
+    'gitHub: Huntike',
+    'linkedin: Logan Le Lay ',
+    
 
   ];
   
@@ -42,7 +42,7 @@ export const Contact= () => {
 
           <Box  direction="row" height="large" wrap="true" justify="center" align="center" pad="large" >
           <Box flex="grow"direction="row" width="xmedium" height="xmedium"justify="center" align="center" background="light-1"  >
-            <Form >
+            <Form  width="large" >
               <FormFieldLabel name="firstName" label="FirstName" required />
               <FormFieldLabel name="LastName" label="LastName" required />
               <FormFieldLabel name="email" label="Email" />
@@ -53,14 +53,14 @@ export const Contact= () => {
                     onChange={event => setComments(event.target.value)}
                   />
                 </FormField>
-              <Button type="submit" label="Submit" primary />
+              <Button color="#F27121" type="submit" label="Submit" primary />
               <Text margin={{ left: 'small' }} size="small" color="status-critical">
                 * Required Field
               </Text>
             </Form>
             </Box>
             <Box flex="grow"direction="row" width="xmedium" height="xmedium"justify="center" align="center" background="light-1"  >
-            <List data={locations}>
+            <List data={locations} >
 
           </List>
           </Box>

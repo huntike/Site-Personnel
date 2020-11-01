@@ -1,6 +1,6 @@
 import React from 'react';
-import {Text, WorldMap , Box, Heading,Grid} from 'grommet';
-import './Hobbies.css';
+import {Text, WorldMap , Box, Heading,Image, Paragraph} from 'grommet';
+
 
 
 
@@ -20,30 +20,19 @@ export const Hobbies= () => {
       
  
       
-          <Box  align="center" pad="none"  gap="none">
-              <Grid 
-                  rows={['xxsmall','large']}
-                  columns={['xxsmall','Large', 'Large']}
-                  gap="large"
-                  areas={[
-                      
-                      { name: 'info', start: [1, 1], end: [1, 1] },
-                      { name: 'image', start: [2, 1], end: [2, 1] },
-                      
-
-                  ]}
-                  >
-                    <Box gridArea="info"  align="center" pad="large" background="light-1">
-                          <Heading>Le Sport</Heading>
-                          <Text></Text>
+          <Box  align="center" >
+            <Box direction="row" height="large" wrap="true" justify="center" align="center" margin="large" >
+              <Box  width="large" height="large"justify="center" align="center" background="light-1"  >
+                          <Heading>L'escalade</Heading>
+                          <Text>9 ans que je pratique de l'escalade</Text>
                           <Text></Text>
                     </Box>
-                    <Box gridArea="image" align="center" pad="large">
-                      <img src={process.env.PUBLIC_URL + '/img/escalade.jpg'} className="img-escalade"/>
+                    <Box  flex="grow"width="large" height="large" background="light-5" align="center"  >
+                      <Image  fit="cover" src={process.env.PUBLIC_URL + '/img/escalade.jpg'} />
 
                     </Box>        
-            </Grid>
-            <Box className="box-map" align="center" width="large" background="dark-2">
+            </Box>
+            <Box className="box-map" align="center" width="large" background="dark-2"margin="large">
               <Heading>Mes voyages</Heading>
               <WorldMap className="worl-map"
 
@@ -141,36 +130,44 @@ export const Hobbies= () => {
               {activeTokyo && 
               <Box margin="large">
                 <Heading>Tokyo</Heading>
+                <Paragraph></Paragraph>
               </Box>}
 
               {activeToulouse && 
               <Box margin="large">
                 <Heading>Toulouse</Heading>
+                <Paragraph></Paragraph>
+
               </Box>}
 
               {activeMiami &&
               <Box margin="large">
                 <Heading>Miami</Heading>
+                <Paragraph></Paragraph>
               </Box>}
 
               {activeBogota && 
               <Box margin="large">
                 <Heading>Bogota</Heading>
+                <Paragraph></Paragraph>
               </Box>}
 
               {activeCartagena && 
               <Box margin="large">
                 <Heading>Cartagena</Heading>
+                <Paragraph></Paragraph>
               </Box>}
 
               {activeTunis && 
               <Box margin="large">
                 <Heading>Tunis</Heading>
+                <Paragraph></Paragraph>
               </Box>}
               
               {activeMontreal && 
               <Box margin="large">
                 <Heading>Montreal</Heading>
+                <Paragraph></Paragraph>
               </Box>}
             </Box>
           </Box>

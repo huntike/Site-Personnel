@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box,Text,Stack,Meter,Heading} from 'grommet';
-import './Skills.css'
+
 
 
 export const Skills= () => {
@@ -38,13 +38,13 @@ export const Skills= () => {
      }
     return(
         <Box justify="center" align="center" >
-        <Heading>Compétences</Heading>
-        <Box direction="row" height="large" wrap="true" justify="center" align="center" gap="large" >
-        
+            <Heading>Compétences</Heading>
+            <Box direction="row" height="large" wrap="true" justify="center" align="center" gap="large" >
             
-                {meterValue}
-            
-        </Box>
+                
+                    {meterValue}
+                
+            </Box>
         </Box>
         );
     }
